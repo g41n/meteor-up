@@ -36,6 +36,7 @@ else
     --restart=always \
     --publish=$PORT:80 \
     --volume=$BUNDLE_PATH:/bundle \
+    --link=mongodb:mongodb \
     --hostname="$HOSTNAME-$APPNAME" \
     --env-file=$ENV_FILE \
     --name=$APPNAME \
